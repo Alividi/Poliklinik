@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dokter.TambahJadwalCheckUpDokterActivity"
+    android:layout_margin="20dp">
+
+    <ImageButton
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/btnBackTambahJadwalCheckUpDokter"
+        android:src="@drawable/arrow_left_black_flat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah Jadwal Medical Check Up"
+        android:labelFor="@id/btnBackTambahJadwalCheckUpDokter"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnBackTambahJadwalCheckUpDokter"
+        android:layout_marginTop="-4dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvKategoriJadwalCheckUpDokter"
+        android:text="Kategori"
+        android:labelFor="@id/sNamaDokterTambahJadwalCheckUpDokter"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBackTambahJadwalCheckUpDokter"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:theme="@style/mySpinnerItemStyleGreyed"
+        android:id="@+id/sKategoriTambahJadwalCheckUpDokter"
+        android:text="Medical Check Up"
+        android:background="@drawable/spinner_bg_disabled"
+        app:layout_constraintTop_toBottomOf="@id/tvKategoriJadwalCheckUpDokter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLabelTanggalCheckUpDokter"
+        android:text="Tanggal"
+        android:labelFor="@id/etTanggalCheckUpTambahJadwalDokter"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sKategoriTambahJadwalCheckUpDokter"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:id="@+id/etTanggalCheckUpTambahJadwalDokter"
+        android:inputType="date"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:background="@drawable/et_border_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelTanggalCheckUpDokter"
+        android:layout_marginTop="7dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLabelJamCheckUpDokter"
+        android:text="Waktu"
+        android:labelFor="@id/sJamCheckUpTambahJadwalDokter"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/etTanggalCheckUpTambahJadwalDokter"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:theme="@style/mySpinnerItemStyle"
+        android:id="@+id/sJamCheckUpTambahJadwalDokter"
+        android:background="@drawable/spinner_bg_input"
+        android:entries="@array/JamCheckup"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelJamCheckUpDokter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLabelCheckUpNamaPasienDokter"
+        android:text="Nama Pasien"
+        android:labelFor="@id/sNamaPasienTambahJadwalCheckUpDokter"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/sJamCheckUpTambahJadwalDokter"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:theme="@style/mySpinnerItemStyle"
+        android:id="@+id/sNamaPasienTambahJadwalCheckUpDokter"
+        android:background="@drawable/spinner_bg_input"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelCheckUpNamaPasienDokter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLabelNamaDokterCheckUpDokter"
+        android:text="Nama Dokter"
+        android:labelFor="@id/sJamCheckUpTambahJadwalDokter"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/sNamaPasienTambahJadwalCheckUpDokter"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:theme="@style/mySpinnerItemStyleGreyed"
+        android:id="@+id/sNamaDokterTambahJadwalCheckUpDokter"
+        android:text="dr. Hermione"
+        android:background="@drawable/spinner_bg_disabled"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelNamaDokterCheckUpDokter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancelTambahJadwalCheckUpDokter"
+        android:text="Cancel"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/darker_pink"
+        app:layout_constraintTop_toBottomOf="@id/sNamaDokterTambahJadwalCheckUpDokter"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="34dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnTambahCheckUpDokter"
+        android:text="Tambah"
+        android:textSize="16sp"
+        android:elevation="10dp"
+        android:outlineSpotShadowColor="@color/purple2"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:stateListAnimator="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCancelTambahJadwalCheckUpDokter"
+        android:background="@drawable/btn_input_bg"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginTop="34dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

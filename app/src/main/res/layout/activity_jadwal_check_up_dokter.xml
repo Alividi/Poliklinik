@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dokter.JadwalCheckUpDokterActivity"
+    android:layout_margin="20dp">
+
+    <ImageButton
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/btnBackJadwalCheckUpDokter"
+        android:src="@drawable/arrow_left_black_flat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="14dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jadwal Medical Check Up"
+        android:labelFor="@id/btnBackJadwalCheckUpDokter"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnBackJadwalCheckUpDokter"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="36dp"
+        android:id="@+id/sHariJadwalCheckUpDokter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBackJadwalCheckUpDokter"
+        app:layout_constraintEnd_toStartOf="@id/sBulanJadwalCheckUpDokter"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/spinner_bg_input"
+        android:entries="@array/Hari"
+        android:theme="@style/mySpinnerItemStyle"/>
+
+    <Spinner
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:id="@+id/sBulanJadwalCheckUpDokter"
+        app:layout_constraintStart_toEndOf="@id/sHariJadwalCheckUpDokter"
+        app:layout_constraintTop_toBottomOf="@id/btnBackJadwalCheckUpDokter"
+        app:layout_constraintEnd_toStartOf="@id/sTahunJadwalCheckUpDokter"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/spinner_bg_input"
+        android:entries="@array/Bulan"
+        android:theme="@style/mySpinnerItemStyle"/>
+
+    <Spinner
+        android:layout_width="120dp"
+        android:layout_height="36dp"
+        android:id="@+id/sTahunJadwalCheckUpDokter"
+        app:layout_constraintStart_toEndOf="@id/sBulanJadwalCheckUpDokter"
+        app:layout_constraintTop_toTopOf="@id/sBulanJadwalCheckUpDokter"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/spinner_bg_input"
+        android:entries="@array/Tahun"
+        android:theme="@style/mySpinnerItemStyle"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/recyclerViewJadwalCheckUpDokter"
+        app:layout_constraintTop_toBottomOf="@id/sBulanJadwalCheckUpDokter"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnTambahJadwalCheckUpDokter"
+        android:layout_marginBottom="25dp"
+        tools:listitem="@layout/recycler_jadwal_checkup_dokter" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnTambahJadwalCheckUpDokter"
+        android:text="Tambah Jadwal"
+        android:textSize="16sp"
+        android:elevation="10dp"
+        android:outlineSpotShadowColor="@color/purple2"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:stateListAnimator="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/btn_input_bg"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="25dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

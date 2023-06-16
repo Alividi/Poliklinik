@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo_app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Poliklinik"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".dokter.PengajuanRmDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.RekamMedisDetailDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.TambahJadwalDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.AntrianDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.PengajuanRmDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.TambahRekamMedisDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.RekamMedisDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.ListDataPasienDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.ListDataPasienDokterDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.TambahJadwalCheckUpDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.JadwalCheckUpDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pasien.JadwalCheckUpPasienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pasien.RekamMedisDetailPasienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pasien.TekananDarahPasienEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pasien.TekananDarahPasienDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pasien.TambahTekananDarahPasienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pasien.TekananDarahPasienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pasien.RekamMedisPasienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.TambahJadwalKonsultasiDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.JadwalKonsultasiDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pasien.TambahJadwalKonsultasiPasienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pasien.JadwalKonsultasiPasienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.SplashScreenDokterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pasien.PasienMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.DokterMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

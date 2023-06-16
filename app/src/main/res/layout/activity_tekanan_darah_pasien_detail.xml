@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pasien.TekananDarahPasienDetailActivity"
+    android:layout_margin="20dp">
+
+    <ImageButton
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/btnBackDetailTekananDarahPasien"
+        android:src="@drawable/arrow_left_black_flat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="14dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tekanan Darah"
+        android:id="@+id/tvTekananDarahDetail"
+        android:labelFor="@id/btnBackDetailTekananDarahPasien"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnBackDetailTekananDarahPasien"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/img_jam"
+        android:id="@+id/ivTglWaktuDetail"
+        app:layout_constraintTop_toBottomOf="@id/btnBackDetailTekananDarahPasien"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="31dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal dan Waktu"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="13sp"
+        android:textColor="@color/purple"
+        app:layout_constraintTop_toTopOf="@id/ivTglWaktuDetail"
+        app:layout_constraintBottom_toBottomOf="@id/ivTglWaktuDetail"
+        app:layout_constraintStart_toEndOf="@id/ivTglWaktuDetail"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal"
+        android:labelFor="@id/etTglTekananDarahDetail"
+        android:id="@+id/tvTglTekananDarahDetail"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/purple"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivTglWaktuDetail"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:id="@+id/etTglTekananDarahDetail"
+        android:gravity="center_vertical"
+        android:text="00 Month 0000"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="11sp"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTglTekananDarahDetail"
+        android:background="@drawable/et_border_input"
+        android:layout_marginTop="13dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Waktu"
+        android:labelFor="@id/etWaktuTekananDarahDetail"
+        android:id="@+id/tvWaktuTekananDarahDetail"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/purple"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etTglTekananDarahDetail"
+        android:layout_marginTop="13dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:id="@+id/etWaktuTekananDarahDetail"
+        android:gravity="center_vertical"
+        android:text="00:00"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="11sp"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWaktuTekananDarahDetail"
+        android:background="@drawable/et_border_input"
+        android:layout_marginTop="13dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="20dp"
+        android:src="@drawable/img_laporan"
+        android:id="@+id/ivInformasiDetail"
+        app:layout_constraintTop_toBottomOf="@id/etWaktuTekananDarahDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informasi"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="13sp"
+        android:textColor="@color/purple"
+        app:layout_constraintTop_toTopOf="@id/ivInformasiDetail"
+        app:layout_constraintBottom_toBottomOf="@id/ivInformasiDetail"
+        app:layout_constraintStart_toEndOf="@id/ivInformasiDetail"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Batas Atas"
+        android:labelFor="@id/etBatasAtasTekananDarahDetail"
+        android:id="@+id/tvBatasAtasTekananDarahDetail"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/purple"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivInformasiDetail"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:id="@+id/etBatasAtasTekananDarahDetail"
+        android:gravity="center_vertical"
+        android:text="000"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="11sp"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvSatuanTDarah1Detail"
+        app:layout_constraintTop_toBottomOf="@id/tvBatasAtasTekananDarahDetail"
+        android:background="@drawable/et_border_input"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSatuanTDarah1Detail"
+        android:text="mm Hg"
+        android:textColor="@color/new_grey"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etBatasAtasTekananDarahDetail"
+        app:layout_constraintBottom_toBottomOf="@id/etBatasAtasTekananDarahDetail"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Batas Bawah"
+        android:labelFor="@id/etBatasBawahTekananDarahDetail"
+        android:id="@+id/tvBatasBawahTekananDarahDetail"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/purple"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etBatasAtasTekananDarahDetail"
+        android:layout_marginTop="13dp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:id="@+id/etBatasBawahTekananDarahDetail"
+        android:gravity="center_vertical"
+        android:text="000"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="11sp"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvSatuanTDarah2Detail"
+        app:layout_constraintTop_toBottomOf="@id/tvBatasBawahTekananDarahDetail"
+        android:background="@drawable/et_border_input"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSatuanTDarah2Detail"
+        android:text="mm Hg"
+        android:textColor="@color/new_grey"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etBatasBawahTekananDarahDetail"
+        app:layout_constraintBottom_toBottomOf="@id/etBatasBawahTekananDarahDetail"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Komentar"
+        android:labelFor="@id/etKomentarTekananDarahDetail"
+        android:id="@+id/tvKomentarTekananDarahDetail"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/purple"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etBatasBawahTekananDarahDetail"
+        android:layout_marginTop="13dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:id="@+id/etKomentarTekananDarahDetail"
+        android:gravity="center_vertical"
+        android:text="Comment"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="11sp"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvKomentarTekananDarahDetail"
+        android:background="@drawable/et_border_input"
+        android:layout_marginTop="13dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".dokter.NotifikasiDokterFragment"
+    android:layout_margin="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stickyHeaderDokter"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNamaDokter"
+            android:text="Hello, dr. "
+            android:labelFor="@id/btnLogoutDokter"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How are you feeling today?"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="12sp"
+            android:textColor="@color/grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNamaDokter"
+            android:layout_marginTop="-5dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnLogoutDokter"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/btn_logout_bg"
+            android:src="@drawable/logout_icon"
+            android:padding="10dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stickyHeaderDokter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="15dp"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvAntrianDokter"
+                android:text="Antrian Selanjutnya"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAntrian"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                tools:listitem="@layout/recycler_antrian_dokter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAntrianDokter"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:id="@+id/tvInfoAntrianDokter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak Ada Antrian"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="11sp"
+                android:textColor="@color/grey"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAntrianDokter"
+                app:layout_constraintBottom_toTopOf="@id/tvMenuDokter"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvMenuDokter"
+                android:text="Menu"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/tvAntrianDokter"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="140dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/hsvHomeDokter"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMenuDokter"
+                android:layout_marginTop="13dp"
+                android:scrollbars="none">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btnDaftarAntrianDokter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="35dp"
+                        app:layout_constraintEnd_toStartOf="@id/btnJadwalKonsulDokter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivDaftarAntrianDokter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_green_bg"
+                            android:paddingStart="8.5dp"
+                            android:paddingTop="14dp"
+                            android:paddingEnd="8.5dp"
+                            android:paddingBottom="14dp"
+                            android:src="@drawable/img_daftar_antrian_dokter"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvBtnDaftarDokter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:labelFor="@id/ivDaftarAntrianDokter"
+                            android:text="Daftar"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@id/ivDaftarAntrianDokter"
+                            app:layout_constraintStart_toStartOf="@id/ivDaftarAntrianDokter"
+                            app:layout_constraintTop_toBottomOf="@id/ivDaftarAntrianDokter" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Antrian"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@id/ivDaftarAntrianDokter"
+                            app:layout_constraintStart_toStartOf="@id/ivDaftarAntrianDokter"
+                            app:layout_constraintTop_toBottomOf="@id/tvBtnDaftarDokter" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btnJadwalKonsulDokter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="35dp"
+                        app:layout_constraintEnd_toStartOf="@id/btnJadwalCheckupDokter"
+                        app:layout_constraintStart_toEndOf="@id/btnDaftarAntrianDokter"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivJadwalKonsulDokter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_blue_bg"
+                            android:paddingStart="15dp"
+                            android:paddingTop="13dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="13dp"
+                            android:src="@drawable/img_jadwal_konsul_dokter"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvBtnJadwalDokter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:labelFor="@id/ivJadwalKonsulDokter"
+                            android:text="Jadwal"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@id/ivJadwalKonsulDokter"
+                            app:layout_constraintStart_toStartOf="@id/ivJadwalKonsulDokter"
+                            app:layout_constraintTop_toBottomOf="@id/ivJadwalKonsulDokter" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Konsultasi"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@id/ivJadwalKonsulDokter"
+                            app:layout_constraintStart_toStartOf="@id/ivJadwalKonsulDokter"
+                            app:layout_constraintTop_toBottomOf="@id/tvBtnJadwalDokter" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btnJadwalCheckupDokter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="35dp"
+                        app:layout_constraintEnd_toStartOf="@id/btnPasienDokter"
+                        app:layout_constraintStart_toEndOf="@id/btnJadwalKonsulDokter"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivJadwalCheckupDokter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_orange_bg"
+                            android:paddingStart="8dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="9dp"
+                            android:paddingBottom="7dp"
+                            android:src="@drawable/img_jadwal_checkup_dokter"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvBtnJadwalCDokter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:labelFor="@id/ivJadwalCheckupDokter"
+                            android:text="Jadwal"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@id/ivJadwalCheckupDokter"
+                            app:layout_constraintStart_toStartOf="@id/ivJadwalCheckupDokter"
+                            app:layout_constraintTop_toBottomOf="@id/ivJadwalCheckupDokter" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Check Up"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@id/ivJadwalCheckupDokter"
+                            app:layout_constraintStart_toStartOf="@id/ivJadwalCheckupDokter"
+                            app:layout_constraintTop_toBottomOf="@id/tvBtnJadwalCDokter" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btnPasienDokter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="35dp"
+                        app:layout_constraintEnd_toStartOf="@id/btnRekamMedisDokter"
+                        app:layout_constraintStart_toEndOf="@id/btnJadwalCheckupDokter"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivPasienDokter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_pink_bg"
+                            android:paddingStart="11.5dp"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="10.5dp"
+                            android:paddingBottom="7.66dp"
+                            android:src="@drawable/img_pasien_dokter"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvBtnPasienDokter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:labelFor="@id/ivPasienDokter"
+                            android:text="Pasien"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@id/ivPasienDokter"
+                            app:layout_constraintStart_toStartOf="@id/ivPasienDokter"
+                            app:layout_constraintTop_toBottomOf="@id/ivPasienDokter" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btnRekamMedisDokter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/btnPasienDokter"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivRekamMedisDokter"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:background="@drawable/btn_green_bg"
+                            android:padding="5dp"
+                            android:src="@drawable/img_pengajuan_rekan_medis_admin"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvBtnRekamMedisDokter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:labelFor="@id/ivDaftarAntrianDokter"
+                            android:text="Rekam"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@id/ivRekamMedisDokter"
+                            app:layout_constraintStart_toStartOf="@id/ivRekamMedisDokter"
+                            app:layout_constraintTop_toBottomOf="@id/ivRekamMedisDokter" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Medis"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@id/ivRekamMedisDokter"
+                            app:layout_constraintStart_toStartOf="@id/ivRekamMedisDokter"
+                            app:layout_constraintTop_toBottomOf="@id/tvBtnRekamMedisDokter" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvJadwalMendatangDokter"
+                android:text="Jadwal Mendatang"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/hsvHomeDokter"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="28dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvJadwalMendatangDokter"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                tools:listitem="@layout/recycler_jadwal_konsultasi_dokter"
+                app:layout_constraintTop_toBottomOf="@id/tvJadwalMendatangDokter"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tvInfoJadwalDokter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak Ada Jadwal"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="11sp"
+                android:textColor="@color/grey"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvJadwalMendatangDokter"
+                app:layout_constraintBottom_toTopOf="@id/tvPengajuanRMDokter"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPengajuanRMDokter"
+                android:text="Pengajuan Rekam Medis"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/tvJadwalMendatangDokter"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="150dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPengajuanRM"
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPengajuanRMDokter"
+                tools:listitem="@layout/recycler_p_rekam_medis_dokter"
+                android:layout_marginTop="18dp"/>
+
+            <TextView
+                android:id="@+id/tvInfoPRMDokter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak Ada Pengajuan"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="11sp"
+                android:textColor="@color/grey"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPengajuanRMDokter"
+                app:layout_constraintBottom_toTopOf="@id/btnShowMorePengajuanRM"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/btnShowMorePengajuanRM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tampilkan Semua"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="11sp"
+                android:textColor="@color/grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPengajuanRMDokter"
+                android:layout_marginTop="118dp"
+                android:paddingBottom="20dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

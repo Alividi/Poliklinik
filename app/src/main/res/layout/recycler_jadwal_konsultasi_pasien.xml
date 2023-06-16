@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="18dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/jadwalKonsultasiPasien"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/menu_bg">
+
+        <TextView
+            android:id="@+id/tvJamJadwalKonsultasiPasien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="25sp"
+            android:textColor="@color/purple"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/tvNamaPasienJadwalKonsultasiPasien"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Ajeng Zalfa"
+            android:labelFor="@id/btnDeclineJadwalKonsultasiPasien"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="17sp"
+            android:textColor="@color/purple"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvJamJadwalKonsultasiPasien"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="22dp"/>
+
+        <TextView
+            android:id="@+id/tvNamaDokterJadwalKonsultasiPasien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dr. Angelina"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/purple"
+            android:textSize="10sp"
+            app:layout_constraintTop_toBottomOf="@id/tvNamaPasienJadwalKonsultasiPasien"
+            app:layout_constraintStart_toEndOf="@id/tvJamJadwalKonsultasiPasien"
+            android:layout_marginStart="22dp"/>
+
+        <View
+            android:id="@+id/dotJadwalKonsultasiPasien"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:background="@drawable/dot_bg_purple"
+            app:layout_constraintTop_toTopOf="@id/tvJenisJadwalKonsultasiPasien"
+            app:layout_constraintBottom_toBottomOf="@id/tvJenisJadwalKonsultasiPasien"
+            app:layout_constraintStart_toEndOf="@id/tvJamJadwalKonsultasiPasien"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="-2dp"/>
+
+        <TextView
+            android:id="@+id/tvJenisJadwalKonsultasiPasien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Konsultasi"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="9sp"
+            android:textColor="@color/purple3"
+            app:layout_constraintStart_toEndOf="@id/dotJadwalKonsultasiPasien"
+            app:layout_constraintTop_toBottomOf="@id/tvNamaDokterJadwalKonsultasiPasien"
+            android:layout_marginStart="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDeclineJadwalKonsultasiPasien"
+            android:background="@drawable/btn_close_red_bg"
+            android:src="@drawable/ic_close_round"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="20dp"
+            android:padding="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvInfoJadwal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tidak Ada Jadwal"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="11sp"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/jadwalKonsultasiPasien"
+        app:layout_constraintBottom_toBottomOf="@id/jadwalKonsultasiPasien"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

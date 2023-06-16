@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dokter.PengajuanRmDetailActivity"
+    android:layout_margin="20dp">
+
+    <ImageButton
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/btnBackPRMDetailPasien"
+        android:src="@drawable/arrow_left_black_flat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="14dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rekam Medis"
+        android:labelFor="@id/btnBackRiwayatKunjunganDetailPasien"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnBackPRMDetailPasien"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/btnBackPRMDetailPasien"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnIzikanPRMDokter"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="18dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Pasien"
+                android:id="@+id/tvNmPasienPRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/purple"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="nama"
+                android:id="@+id/detailNmPasienPRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/spinner_bg_disabled"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNmPasienPRMPasien"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Periksa"
+                android:id="@+id/tvTglPRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/purple"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailNmPasienPRMPasien"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00-00-0000"
+                android:id="@+id/detailTglPRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTglPRMPasien"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Rekam Medis"
+                android:id="@+id/tvNoPRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/purple"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailTglPRMPasien"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NRM0"
+                android:id="@+id/detailNoPRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNoPRMPasien"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keluhan"
+                android:id="@+id/tvKeluhanPRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/purple"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailNoPRMPasien"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Penglihatan Kabur"
+                android:id="@+id/detailKeluhanPRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKeluhanPRMPasien"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Dokter"
+                android:id="@+id/tvNmDokterPRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/purple"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailKeluhanPRMPasien"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dr. Dummy"
+                android:id="@+id/detailNmDokterPRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/spinner_bg_disabled"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNmDokterPRMPasien"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagnosa"
+                android:id="@+id/tvDiagnosaPRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/purple"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailNmDokterPRMPasien"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Miopi"
+                android:id="@+id/detailDiagnosaPRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDiagnosaPRMPasien"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Obat"
+                android:id="@+id/tvObatPRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/purple"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailDiagnosaPRMPasien"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="Aceon"
+                android:id="@+id/detailObat1PRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvObatPRMPasien"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textAlignment="center"
+                android:id="@+id/detailJmlObat1PRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/detailObat1PRMPasien"
+                app:layout_constraintTop_toBottomOf="@id/tvObatPRMPasien"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="7dp"/>
+
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="Met Actoplus"
+                android:id="@+id/detailObat2PRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailObat1PRMPasien"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textAlignment="center"
+                android:id="@+id/detailJmlObat2PRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/detailObat2PRMPasien"
+                app:layout_constraintTop_toBottomOf="@id/detailObat1PRMPasien"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="7dp"/>
+
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="Cardarone"
+                android:id="@+id/detailObat3PRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailObat2PRMPasien"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textAlignment="center"
+                android:id="@+id/detailJmlObat3PRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/detailObat3PRMPasien"
+                app:layout_constraintTop_toBottomOf="@id/detailObat2PRMPasien"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="7dp"/>
+
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="Cardarone"
+                android:id="@+id/detailObat4PRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailObat3PRMPasien"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textAlignment="center"
+                android:id="@+id/detailJmlObat4PRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/detailObat4PRMPasien"
+                app:layout_constraintTop_toBottomOf="@id/detailObat3PRMPasien"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="7dp"/>
+
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="Cardarone"
+                android:id="@+id/detailObat5PRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailObat4PRMPasien"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textAlignment="center"
+                android:id="@+id/detailJmlObat5PRMPasien"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/detailObat5PRMPasien"
+                app:layout_constraintTop_toBottomOf="@id/detailObat4PRMPasien"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="7dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnIzikanPRMDokter"
+        android:text="Izikan"
+        android:textSize="16sp"
+        android:elevation="10dp"
+        android:outlineSpotShadowColor="#1BD15D"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:stateListAnimator="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnTolakPRMDokter"
+        android:background="@drawable/btn_update_bg"
+        android:layout_marginBottom="18dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnTolakPRMDokter"
+        android:text="Tolak"
+        android:textSize="16sp"
+        android:elevation="10dp"
+        android:outlineSpotShadowColor="#E96479"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:stateListAnimator="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/btn_red_bg"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".dokter.DetailDataPasienFragment">
+
+    <TextView
+        android:id="@+id/tvNmPasienDataPasien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pasien"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/purple"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/etNmPasienDataPasien"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:text="Nama Pasien"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/dark_grey"
+        android:textSize="11sp"
+        android:focusable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNmPasienDataPasien"
+        android:background="@drawable/et_border_input"
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+    <TextView
+        android:id="@+id/tvAlamatDataPasien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alamat"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/purple"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNmPasienDataPasien"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/etAlamatDataPasien"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Alamat"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/dark_grey"
+        android:textSize="11sp"
+        android:focusable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAlamatDataPasien"
+        android:background="@drawable/et_border_input"
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvNimDataPasien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIM"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/purple"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etAlamatDataPasien"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/etNimDataPasien"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:text="J0303000000"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/dark_grey"
+        android:textSize="11sp"
+        android:focusable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNimDataPasien"
+        android:background="@drawable/et_border_input"
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+    <TextView
+        android:id="@+id/tvBBDataPasien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Berat Badan"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/purple"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNimDataPasien"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/etBBDataPasien"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:text="00"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/dark_grey"
+        android:textSize="11sp"
+        android:focusable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBBDataPasien"
+        android:background="@drawable/et_border_input"
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+    <TextView
+        android:id="@+id/tvTBDataPasien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tinggi Badan"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/purple"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etBBDataPasien"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/etTBDataPasien"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:text="000"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/dark_grey"
+        android:textSize="11sp"
+        android:focusable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTBDataPasien"
+        android:background="@drawable/et_border_input"
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

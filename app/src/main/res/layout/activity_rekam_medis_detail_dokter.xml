@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dokter.RekamMedisDetailDokterActivity"
+    android:layout_margin="20dp">
+
+    <ImageButton
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/btnBackRMDetailDokter"
+        android:src="@drawable/arrow_left_black_flat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="14dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rekam Medis"
+        android:labelFor="@id/btnBackRMDetailDokter"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnBackRMDetailDokter"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/btnBackRMDetailDokter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Periksa"
+                android:id="@+id/tvTanggalPeriksaDRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/purple"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="16/4/2023"
+                android:id="@+id/detailTanggalPeriksaDRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTanggalPeriksaDRMDokter"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nomor Rekam Medis"
+                android:id="@+id/tvNomorDRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/purple"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailTanggalPeriksaDRMDokter"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NMR002"
+                android:id="@+id/detailNomorDRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNomorDRMDokter"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pasien"
+                android:id="@+id/tvDokterDRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/purple"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailNomorDRMDokter"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dr. Angelina"
+                android:id="@+id/detailDokterDRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDokterDRMDokter"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keluhan"
+                android:id="@+id/tvKeluhanDRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/purple"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailDokterDRMDokter"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Penglihatan Kabur"
+                android:id="@+id/detailKeluhanDRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKeluhanDRMDokter"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagnosa"
+                android:id="@+id/tvDiagnosaDRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/purple"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailKeluhanDRMDokter"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NMR002"
+                android:id="@+id/detailDiagnosaDRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDiagnosaDRMDokter"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Obat"
+                android:id="@+id/tvObatDRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/purple"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailDiagnosaDRMDokter"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="Aceon"
+                android:id="@+id/detailObat1DRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvObatDRMDokter"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textAlignment="center"
+                android:id="@+id/detailJmlObat1DRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/detailObat1DRMDokter"
+                app:layout_constraintTop_toBottomOf="@id/tvObatDRMDokter"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="7dp"/>
+
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="Met Actoplus"
+                android:id="@+id/detailObat2DRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailObat1DRMDokter"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textAlignment="center"
+                android:id="@+id/detailJmlObat2DRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/detailObat2DRMDokter"
+                app:layout_constraintTop_toBottomOf="@id/detailObat1DRMDokter"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="7dp"/>
+
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="Cardarone"
+                android:id="@+id/detailObat3DRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailObat2DRMDokter"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textAlignment="center"
+                android:id="@+id/detailJmlObat3DRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/detailObat3DRMDokter"
+                app:layout_constraintTop_toBottomOf="@id/detailObat2DRMDokter"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="7dp"/>
+
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="Cardarone"
+                android:id="@+id/detailObat4DRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailObat3DRMDokter"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textAlignment="center"
+                android:id="@+id/detailJmlObat4DRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/detailObat4DRMDokter"
+                app:layout_constraintTop_toBottomOf="@id/detailObat3DRMDokter"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="7dp"/>
+
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="Cardarone"
+                android:id="@+id/detailObat5DRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailObat4DRMDokter"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textAlignment="center"
+                android:id="@+id/detailJmlObat5DRMDokter"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="11dp"
+                android:textColor="@color/dark_grey"
+                android:background="@drawable/et_border_input"
+                android:paddingTop="8dp"
+                android:paddingBottom="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/detailObat5DRMDokter"
+                app:layout_constraintTop_toBottomOf="@id/detailObat4DRMDokter"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="7dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

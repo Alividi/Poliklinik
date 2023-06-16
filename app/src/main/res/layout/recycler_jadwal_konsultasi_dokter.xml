@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="18dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/jadwalKonsultasiDokter"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/menu_bg">
+
+        <TextView
+            android:id="@+id/tvJamJadwalKonsultasiDokter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="25sp"
+            android:textColor="@color/purple"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/tvNamaPasienJadwalKonsultasiDokter"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Ajeng Zalfa"
+            android:labelFor="@id/btnHapusJadwalKonsultasiDokter"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="17sp"
+            android:textColor="@color/purple"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvJamJadwalKonsultasiDokter"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="22dp"/>
+
+        <TextView
+            android:id="@+id/tvNamaDokterJadwalKonsultasiDokter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dr. Angelina"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/purple"
+            android:textSize="10sp"
+            app:layout_constraintTop_toBottomOf="@id/tvNamaPasienJadwalKonsultasiDokter"
+            app:layout_constraintStart_toEndOf="@id/tvJamJadwalKonsultasiDokter"
+            android:layout_marginStart="22dp"/>
+
+        <View
+            android:id="@+id/dotJadwalKonsultasiDokter"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:background="@drawable/dot_bg_purple"
+            app:layout_constraintTop_toTopOf="@id/tvJenisJadwalKonsultasiDokter"
+            app:layout_constraintBottom_toBottomOf="@id/tvJenisJadwalKonsultasiDokter"
+            app:layout_constraintStart_toEndOf="@id/tvJamJadwalKonsultasiDokter"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="-2dp"/>
+
+        <TextView
+            android:id="@+id/tvJenisJadwalKonsultasiDokter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Konsultasi"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="9sp"
+            android:textColor="@color/purple3"
+            app:layout_constraintStart_toEndOf="@id/dotJadwalKonsultasiDokter"
+            app:layout_constraintTop_toBottomOf="@id/tvNamaDokterJadwalKonsultasiDokter"
+            android:layout_marginStart="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHapusJadwalKonsultasiDokter"
+            android:background="@drawable/btn_close_red_bg"
+            android:src="@drawable/ic_close_round"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="20dp"
+            android:padding="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnDoneJadwalKonsultasiDokter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_done_green_bg"
+            android:padding="8dp"
+            android:src="@drawable/ic_check_rounded_green"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnHapusJadwalKonsultasiDokter"
+            android:layout_marginEnd="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

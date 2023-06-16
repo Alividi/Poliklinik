@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/miHomeDokter"
+        android:title="Home"
+        android:orderInCategory="100"
+        android:icon="@drawable/home_icon" />
+
+    <item android:id="@+id/miCalendarDokter"
+        android:title="Calendar"
+        android:orderInCategory="200"
+        android:icon="@drawable/calendar_icon"/>
+
+    <item android:id="@+id/miPlaceholderDokter"
+        android:title=""
+        android:orderInCategory="300"
+        android:enabled="false" />
+
+    <item android:id="@+id/miNotifikasiDokter"
+        android:title="Notifikasi"
+        android:orderInCategory="400"
+        android:icon="@drawable/history_icon"/>
+
+    <item android:id="@+id/miProfileDokter"
+        android:title="Profile"
+        android:orderInCategory="500"
+        android:icon="@drawable/profile_icon"/>
+
+</menu>

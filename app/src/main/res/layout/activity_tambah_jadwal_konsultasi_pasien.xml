@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pasien.TambahJadwalKonsultasiPasienActivity"
+    android:layout_margin="20dp">
+
+    <ImageButton
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:id="@+id/btnBackTambahJadwalKonsultasiPasien"
+        android:src="@drawable/arrow_left_black_flat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah Jadwal Konsultasi"
+        android:labelFor="@id/btnBackTambahJadwalKonsultasiPasien"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnBackTambahJadwalKonsultasiPasien"
+        android:layout_marginTop="-4dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvKategoriJadwalKonsul"
+        android:text="Kategori"
+        android:labelFor="@id/sNamaDokterTambahJadwalPasien"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBackTambahJadwalKonsultasiPasien"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:theme="@style/mySpinnerItemStyleGreyed"
+        android:id="@+id/sKategoriTambahJadwalPasien"
+        android:text="Konsultasi"
+        android:background="@drawable/spinner_bg_disabled"
+        app:layout_constraintTop_toBottomOf="@id/tvKategoriJadwalKonsul"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLabelTanggalKonsultasiPasien"
+        android:text="Tanggal"
+        android:labelFor="@id/etTanggalKonsultasiTambahJadwalPasien"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sKategoriTambahJadwalPasien"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:id="@+id/etTanggalKonsultasiTambahJadwalPasien"
+        android:inputType="date"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:background="@drawable/et_border_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelTanggalKonsultasiPasien"
+        android:layout_marginTop="7dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLabelJamKonsultasiPasien"
+        android:text="Waktu"
+        android:labelFor="@id/sJamKonsultasiTambahJadwalPasien"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/etTanggalKonsultasiTambahJadwalPasien"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:theme="@style/mySpinnerItemStyle"
+        android:id="@+id/sJamKonsultasiTambahJadwalPasien"
+        android:background="@drawable/spinner_bg_input"
+        android:entries="@array/JamKonsultasi"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelJamKonsultasiPasien"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLabelNamaPasien"
+        android:text="Nama Pasien"
+        android:labelFor="@id/sNamaPasienTambahJadwalPasien"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/sJamKonsultasiTambahJadwalPasien"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:theme="@style/mySpinnerItemStyleGreyed"
+        android:text="Ajeng Zalfa"
+        android:id="@+id/sNamaPasienTambahJadwalPasien"
+        android:background="@drawable/spinner_bg_disabled"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelNamaPasien"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLabelNamaDokterKonsultasiPasien"
+        android:text="Nama Dokter"
+        android:labelFor="@id/sJamKonsultasiTambahJadwalPasien"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/sNamaPasienTambahJadwalPasien"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:theme="@style/mySpinnerItemStyle"
+        android:id="@+id/sNamaDokterTambahJadwalPasien"
+        android:background="@drawable/spinner_bg_input"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelNamaDokterKonsultasiPasien"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancelTambahJadwalKonsultasiPasien"
+        android:text="Cancel"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/darker_pink"
+        app:layout_constraintTop_toBottomOf="@id/sNamaDokterTambahJadwalPasien"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="34dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnTambahKonsultasiPasien"
+        android:text="Tambah"
+        android:textSize="16sp"
+        android:elevation="10dp"
+        android:outlineSpotShadowColor="@color/purple2"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:stateListAnimator="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCancelTambahJadwalKonsultasiPasien"
+        android:background="@drawable/btn_input_bg"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginTop="34dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

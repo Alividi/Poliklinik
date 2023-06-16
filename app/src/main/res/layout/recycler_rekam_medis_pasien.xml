@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="25dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/rmPasien"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/border_layout_grey">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NMR0"
+            android:id="@+id/tvNoRMPasien"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/purple"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="13dp"/>
+
+        <TextView
+            android:id="@+id/tvTanggalRMPasien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00-00-0000"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="12sp"
+            android:textColor="@color/purple"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNoRMPasien"
+            android:layout_marginStart="13dp"/>
+
+        <TextView
+            android:id="@+id/tvStatusRMPasien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belum Diizinkan"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/dark_grey"
+            android:textSize="9sp"
+            app:layout_constraintStart_toEndOf="@id/dotStatusRMPasien"
+            app:layout_constraintTop_toTopOf="@id/dotStatusRMPasien"
+            app:layout_constraintBottom_toBottomOf="@id/dotStatusRMPasien"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="1dp"/>
+
+        <View
+            android:id="@+id/dotStatusRMPasien"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="20.5dp"
+            android:layout_marginEnd="91dp"
+            android:background="@drawable/dot_bg_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAksesRMPasien"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Ajukan Hak Akses Rekam Medis"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="14sp"
+            android:textColor="#FFBF6D"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/btn_rm_yellow"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:textAllCaps="false"
+            android:stateListAnimator="@null"
+            android:enabled="true"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

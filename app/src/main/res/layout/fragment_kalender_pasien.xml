@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".pasien.KalenderPasienFragment"
+    android:layout_margin="20dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvKalenderPasien"
+        android:text="Kalender"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp" />
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="36dp"
+        android:id="@+id/sHariKalenderPasien"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvKalenderPasien"
+        app:layout_constraintEnd_toStartOf="@id/sBulanKalenderPasien"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/spinner_bg_input"
+        android:entries="@array/Hari"
+        android:theme="@style/mySpinnerItemStyle"/>
+
+    <Spinner
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:id="@+id/sBulanKalenderPasien"
+        app:layout_constraintStart_toEndOf="@id/sHariKalenderPasien"
+        app:layout_constraintTop_toBottomOf="@id/tvKalenderPasien"
+        app:layout_constraintEnd_toStartOf="@id/sTahunKalenderPasien"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/spinner_bg_input"
+        android:entries="@array/Bulan"
+        android:theme="@style/mySpinnerItemStyle"/>
+
+    <Spinner
+        android:layout_width="120dp"
+        android:layout_height="36dp"
+        android:id="@+id/sTahunKalenderPasien"
+        app:layout_constraintStart_toEndOf="@id/sBulanKalenderPasien"
+        app:layout_constraintTop_toTopOf="@id/sBulanKalenderPasien"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/spinner_bg_input"
+        android:entries="@array/Tahun"
+        android:theme="@style/mySpinnerItemStyle"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvKalenderPasien"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sHariKalenderPasien"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp"
+        tools:listitem="@layout/recycler_jadwal_konsultasi_pasien"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
